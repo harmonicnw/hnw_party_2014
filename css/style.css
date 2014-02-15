@@ -1,0 +1,31 @@
+* { margin: 0; padding: 0; }
+
+body { background-color: #ff6700; color: white; font-family: Helvetica, Arial, sans-serif; font-weight: 300; font-size: 16px; line-height: 1.6em; }
+
+a { color: #aaffff; text-decoration: none; -webkit-transition: color 1s ease; -moz-transition: color 1s ease; -o-transition: color 1s ease; transition: color 1s ease; }
+a:hover { color: #99dddd; text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6 { color: white; font-family: Helvetica, Arial, sans-serif; font-weight: 300; line-height: 1.2em; }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: #aaffff; }
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover { color: #99dddd; }
+
+h1 { font-size: 2em; margin-bottom: 0.6em; }
+
+h1 em { color: #ed1b2e; font-style: normal; }
+
+h2 { color: #ed1b2e; font-size: 2em; margin-bottom: 0.6em; }
+
+h3 { font-size: 1.3em; font-weight: 700; margin-bottom: 1.12em; }
+
+h4 { font-size: 1em; font-weight: 700; margin-bottom: 0; }
+
+p:first-child, p.first-child, ul:first-child, ul.first-child, ol:first-child, ol.first-child, h1:first-child, h1.first-child, h2:first-child, h2.first-child, h3:first-child, h3.first-child, h4:first-child, h4.first-child, h5:first-child, h5.first-child, h6:first-child, h6.first-child, .panel:first-child, .panel.first-child, .row:first-child, .row.first-child { margin-top: 0; }
+p:last-child, p.last-child, ul:last-child, ul.last-child, ol:last-child, ol.last-child, h1:last-child, h1.last-child, h2:last-child, h2.last-child, h3:last-child, h3.last-child, h4:last-child, h4.last-child, h5:last-child, h5.last-child, h6:last-child, h6.last-child, .panel:last-child, .panel.last-child, .row:last-child, .row.last-child { margin-top: 0; }
+
+p, ul, ol { line-height: 1.6em; margin-bottom: 1em; }
+
+.row { margin-bottom: 1em; }
+
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 { margin-bottom: 1em; }
+.col-md-1:last-child, .col-md-2:last-child, .col-md-3:last-child, .col-md-4:last-child, .col-md-5:last-child, .col-md-6:last-child, .col-md-7:last-child, .col-md-8:last-child, .col-md-9:last-child, .col-md-10:last-child, .col-md-11:last-child, .col-md-12:last-child { margin-bottom: 0; }
+@media (min-width: 992px) { .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 { margin-bottom: 0; } }

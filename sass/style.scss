@@ -1,0 +1,161 @@
+@import "compass/css3";
+
+@mixin breakpoint($point) {
+  @if $point == reader {
+    @media (min-width: 384px) { @content; }
+  }
+  @else if $point == small {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: 992px)  { @content; }
+  }
+  @else if $point == large {
+    @media (min-width: 1200px)  { @content; }
+  }
+}
+
+$text_color: #fff;
+$link_color: #aff;
+$link_hover_color: #9dd;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background-color: #ff6700;
+  color: $text-color;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.6em;
+}
+
+a {
+  color: $link_color;
+  text-decoration: none;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  -o-transition: color 1s ease;
+  transition: color 1s ease;
+
+  &:hover {
+	  color: $link-hover-color;
+	  text-decoration: none;
+  }
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $text-color;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2em;
+  
+  a {
+	  color: $link-color;
+	  
+	  &:hover {
+		 color: $link-hover-color; 
+	  }
+  }
+}
+
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 0.6em;
+}
+
+h1 em {
+  color: #ed1b2e;
+  font-style: normal;
+}
+
+
+h2 {
+  color: #ed1b2e;
+  font-size: 2em;
+  margin-bottom: 0.6em;
+}
+
+
+h3 {
+  font-size: 1.3em;
+  font-weight: 700;
+  margin-bottom: 1.12em;
+}
+
+
+h4 {
+  font-size: 1em;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+
+p,
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.panel,
+.row {
+  
+  &:first-child,
+  &.first-child {
+	margin-top: 0;  
+  }
+  &:last-child,
+  &.last-child {
+	margin-top: 0;  
+  } 
+}
+
+p,
+ul,
+ol {
+  line-height: 1.6em;
+  margin-bottom: 1em;
+}
+
+
+.row {
+  margin-bottom: 1em;
+}
+
+
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12 {
+  margin-bottom: 1em;
+  
+  &:last-child {
+	  margin-bottom: 0;
+  }
+  
+  @include breakpoint(medium) {
+  	margin-bottom: 0;
+  }
+}
