@@ -68,6 +68,10 @@ h6 {
 		 color: $link-hover-color; 
 	  }
   }
+  
+  small {
+	  color: $text-color;
+  }
 }
 
 
@@ -100,7 +104,11 @@ h2 {
 	font-size: $h2-size;
 	margin-bottom: 0.6em;
 	@include single-text-shadow(rgba(0,0,0,0.9), 0, 0, 8px );
-  
+	
+	strong {
+	  font-size: 1.2em;
+	}
+	
 	@include breakpoint(small) {
 		font-size: $h2-size * (1 + (.25 * 1));
 	}
@@ -198,6 +206,12 @@ section {
 	&#dj {
 		background-color: #600;
 	}
+
+	&#end {
+		background-image: url(../images/harmonicnw-144x144.png);
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
 	
 	&#fortgeorge {
 		background-color: #066;
@@ -208,9 +222,7 @@ section {
 	}
 
 	&#intro {
-		background-image: url(../images/harmonicnw-144x144.png);
-		background-position: center center;
-		background-repeat: no-repeat;
+		background-color: #d00;
 	}
 }
 
