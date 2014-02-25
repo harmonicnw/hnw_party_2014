@@ -137,6 +137,7 @@ h4 {
 img {
 	height: auto;
 	width: 100%;
+	padding: 10px 0;
 }
 
 p,
@@ -201,10 +202,28 @@ section {
 	
 	&#celebrate {
 		background-color: #555;
+		background-image: url(../images/national_high_five.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		@include breakpoint (small){
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+		}
+	}
+	
+	&#activities {
+
 	}
 	
 	&#dj {
 		background-color: #600;
+		background-image: url(../images/party_kids.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		@include breakpoint (small){
+			background-attachment: fixed;
+		}
 	}
 
 	&#end {
@@ -237,3 +256,29 @@ section {
 		width: 100%;
 	}
 }
+
+@include breakpoint(small){
+	.appear_from_left {
+		display: inline-block;
+		opacity: 0;
+		filter: alpha(opacity = 0);
+		left: -150px;
+		padding-right: 30px
+	}
+	
+	.appear_from_right {
+		display: inline-block;
+		opacity: 0;
+		filter: alpha(opacity = 0);
+		right: -150px;
+		padding-left: 30px;
+	}
+	
+	.appear_from_left_active,
+	.appear_from_right_active {
+		@include single-transition(opacity, 1s, ease);
+		opacity: 1;
+		filter: alpha(opacity = 100);
+	}
+}
+

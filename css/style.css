@@ -126,6 +126,7 @@ h4 {
 img {
   height: auto;
   width: 100%;
+  padding: 10px 0;
 }
 
 p:first-child, p.first-child,
@@ -233,9 +234,27 @@ ol {
 
 section#celebrate {
   background-color: #555;
+  background-image: url(../images/national_high_five.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  section#celebrate {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
 }
 section#dj {
   background-color: #600;
+  background-image: url(../images/party_kids.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  section#dj {
+    background-attachment: fixed;
+  }
 }
 section#end {
   background-image: url(../images/harmonicnw-144x144.png);
@@ -261,4 +280,32 @@ section#intro {
   height: 600px;
   vertical-align: middle;
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .appear_from_left {
+    display: inline-block;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    left: -150px;
+    padding-right: 30px;
+  }
+
+  .appear_from_right {
+    display: inline-block;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    right: -150px;
+    padding-left: 30px;
+  }
+
+  .appear_from_left_active,
+  .appear_from_right_active {
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
 }
