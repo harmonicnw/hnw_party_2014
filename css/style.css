@@ -234,41 +234,78 @@ ol {
 
 section#celebrate {
   background-color: #555;
-  background-image: url(../images/national_high_five.jpg);
+  background-image: url(http://4.bp.blogspot.com/-ayo4zrFUi84/T_G2WmqpvgI/AAAAAAAAEDI/AvQsgyfExeE/s1600/BLueWhiteStarPaper.png);
+  background-size: cover;
+  background-repeat: repeat;
+}
+section#activities {
+  background-color: #600;
+  background-image: url(../images/green_wallpaper.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 @media (min-width: 768px) {
-  section#celebrate {
-    background-size: cover;
-    background-repeat: no-repeat;
+  section#activities {
+    background-attachment: fixed;
+  }
+}
+section#contest {
+  background-color: #600;
+  background-image: url(../images/epic-high-five.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  section#contest {
     background-attachment: fixed;
   }
 }
 section#dj {
-  background-color: #600;
-  background-image: url(../images/party_kids.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-@media (min-width: 768px) {
-  section#dj {
-    background-attachment: fixed;
-  }
+  background-color: #33a;
 }
 section#end {
   background-image: url(../images/harmonicnw-144x144.png);
   background-position: center center;
   background-repeat: no-repeat;
 }
+section#eighttaps {
+  background-color: #600;
+  background-image: url(../images/beer-texture.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  section#eighttaps {
+    background-attachment: fixed;
+  }
+}
 section#fortgeorge {
-  background-color: #066;
+  background-color: #600;
+  background-image: url(../images/skulls.png);
+  background-repeat: repeat;
+}
+@media (min-width: 768px) {
+  section#fortgeorge {
+    background-attachment: fixed;
+  }
 }
 section#fun {
-  background-color: #606;
+  background-color: #555;
+  background-image: url(http://bglabs.evade.netdna-cdn.com/wp-content/uploads/2013/06/mint-green-chevron-stripes.png);
+  background-image: url(http://bglabs.evade.netdna-cdn.com/wp-content/uploads/2013/05/pastel-polka-dot-background.png);
+  background-size: cover;
+  background-repeat: repeat;
 }
 section#intro {
-  background-color: #d00;
+  background-color: #600;
+  background-image: url(../images/party_kids.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  section#intro {
+    background-attachment: fixed;
+  }
 }
 
 .v-center {
