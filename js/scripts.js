@@ -12,7 +12,13 @@
 			fullHeight();
 		}
 	});
-
+	
+	// fade in body after UI functions have had a chance to load
+	var to = setTimeout( function() {
+		$("body").animate({'opacity': '1'}, 500);
+		console.log("fading in?");
+	}, 500);
+	
 	function initAppear() {
 		$('.appear_from_left').each(function(){
 			$(this).appear(function() {
@@ -27,12 +33,10 @@
 		});
 	};
 	
-
-	
-	function fullHeight () {
+	function fullHeight() {
 		$('section').each(function(){
 			var sheight = $(window).height();
-			$(this).css('height' , sheight+200 + "px");
+			$(this).css('height' , sheight+50 + "px");
 		})
 	}
 	

@@ -16,8 +16,8 @@
 }
 
 $text_color: #fff;
-$link_color: #aff;
-$link_hover_color: #9dd;
+$link_color: #fff;
+$link_hover_color: yellow;
 
 * {
   margin: 0;
@@ -25,9 +25,9 @@ $link_hover_color: #9dd;
 }
 
 body {
-  background-color: #ff6700;
+  background-color: #000;
   color: $text-color;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.1em;
@@ -55,7 +55,7 @@ h4,
 h5,
 h6 {
   color: $text-color;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 700;
   line-height: 1.2em;
   letter-spacing: -0.03em;
@@ -76,55 +76,71 @@ h6 {
 
 
 h1 {
-	$h1-size: 40px;
+	$h1-size: 38px;
 
 	font-size: $h1-size;
 	margin-bottom: 0.6em;
-	@include single-text-shadow(rgba(0,0,0,0.9), 0, 0, 8px );
+	@include single-text-shadow(#000, 0, 0, 10px );
 	
 	strong {
 	  font-size: 1.2em;
 	}
 	
 	@include breakpoint(small) {
-		font-size: $h1-size * (1 + (.25 * 1));
+		font-size: $h1-size * (1 + (.28* 1));
 	}
 	@include breakpoint(medium) {
-		font-size: $h1-size * (1 + (.25 * 2));
+		font-size: $h1-size * (1 + (.28 * 2));
 	}
 	@include breakpoint(large) {
-		font-size: $h1-size * (1 + (.25 * 3));
+		font-size: $h1-size * (1 + (.28 * 3));
 	}
 }
 
 
 h2 {
-	$h2-size: 30px;
+	$h2-size: 28px;
 
 	font-size: $h2-size;
 	margin-bottom: 0.6em;
-	@include single-text-shadow(rgba(0,0,0,0.9), 0, 0, 8px );
+	@include single-text-shadow(#000, 0, 0, 10px );
 	
 	strong {
 	  font-size: 1.2em;
 	}
 	
 	@include breakpoint(small) {
-		font-size: $h2-size * (1 + (.25 * 1));
+		font-size: $h2-size * (1 + (.28 * 1));
 	}
 	@include breakpoint(medium) {
-		font-size: $h2-size * (1 + (.25 * 2));
+		font-size: $h2-size * (1 + (.28 * 2));
 	}
 	@include breakpoint(large) {
-		font-size: $h2-size * (1 + (.25 * 3));
+		font-size: $h2-size * (1 + (.28 * 3));
 	}
 }
 
 
 h3 {
-  font-size: 1.3em;
-  font-weight: 700;
-  margin-bottom: 1.12em;
+	$h2-size: 24px;
+
+	font-size: $h2-size;
+	margin-bottom: 0.6em;
+	@include single-text-shadow(#000, 0, 0, 6px );
+	
+	strong {
+	  font-size: 1.2em;
+	}
+	
+	@include breakpoint(small) {
+		font-size: $h2-size * (1 + (.28 * 1));
+	}
+	@include breakpoint(medium) {
+		font-size: $h2-size * (1 + (.28 * 2));
+	}
+	@include breakpoint(large) {
+		font-size: $h2-size * (1 + (.28 * 3));
+	}
 }
 
 
@@ -165,8 +181,9 @@ h6,
 p,
 ul,
 ol {
-	line-height: 1.6em;
+	line-height: 1.4em;
 	margin-bottom: 1em;
+	@include single-text-shadow(#000, 0, 0, 3px );
 }
 
 
@@ -174,41 +191,24 @@ ol {
   margin-bottom: 1em;
 }
 
-
-.col-md-1,
-.col-md-2,
-.col-md-3,
-.col-md-4,
-.col-md-5,
-.col-md-6,
-.col-md-7,
-.col-md-8,
-.col-md-9,
-.col-md-10,
-.col-md-11,
-.col-md-12 {
-  margin-bottom: 1em;
-  
-  &:last-child {
-	  margin-bottom: 0;
-  }
-  
-  @include breakpoint(medium) {
-  	margin-bottom: 0;
-  }
+@for $i from 1 through 12 {
+	.col-md-#{$i} {
+	  margin-bottom: 1em;
+	  
+	  &:last-child {
+		  margin-bottom: 0;
+	  }
+	  
+	  @include breakpoint(medium) {
+	  	margin-bottom: 0;
+	  }
+	}	
 }
 
 section {
 	
-	&#celebrate {
-		background-color: #555;
-		background-image: url(http://4.bp.blogspot.com/-ayo4zrFUi84/T_G2WmqpvgI/AAAAAAAAEDI/AvQsgyfExeE/s1600/BLueWhiteStarPaper.png);
-		background-size: cover;
-		background-repeat: repeat;
-	}
-	
 	&#activities {
-		background-color: #600;
+		background-color: #000;
 		background-image: url(../images/green_wallpaper.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -217,8 +217,15 @@ section {
 		}
 	}
 	
+	&#celebrate {
+		background-color: #000;
+		background-image: url(http://4.bp.blogspot.com/-ayo4zrFUi84/T_G2WmqpvgI/AAAAAAAAEDI/AvQsgyfExeE/s1600/BLueWhiteStarPaper.png);
+		background-size: cover;
+		background-repeat: repeat;
+	}
+	
 	&#contest {
-		background-color: #600;
+		background-color: #000;
 		background-image: url(../images/epic-high-five.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -228,17 +235,18 @@ section {
 	}
 	
 	&#dj {
-		background-color: #33a;
+		background-color: #600;
 	}
 
 	&#end {
+		background-color: #ff6700;
 		background-image: url(../images/harmonicnw-144x144.png);
 		background-position: center center;
 		background-repeat: no-repeat;
 	}
 	
 	&#eighttaps {
-		background-color: #600;
+		background-color: #000;
 		background-image: url(../images/beer-texture.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -248,7 +256,7 @@ section {
 	}
 	
 	&#fortgeorge {
-		background-color: #600;
+		background-color: #000;
 		background-image: url(../images/skulls.png);
 		background-repeat: repeat;
 		@include breakpoint (small){
@@ -257,21 +265,29 @@ section {
 	}
 	
 	&#fun {
-		background-color: #555;
-		background-image: url(http://bglabs.evade.netdna-cdn.com/wp-content/uploads/2013/06/mint-green-chevron-stripes.png);
+		background-color: #000;
 		background-image: url(http://bglabs.evade.netdna-cdn.com/wp-content/uploads/2013/05/pastel-polka-dot-background.png);
 		background-size: cover;
 		background-repeat: repeat;
 	}
 
 	&#intro {
-		background-color: #600;
+		background-color: #000;
 		background-image: url(../images/party_kids.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
 		@include breakpoint (small){
 			background-attachment: fixed;
 		}
+	}
+}
+
+
+ul.soc {
+	li {
+		font-size: 24px;
+		line-height: 30px;
+		list-style: none;
 	}
 }
 

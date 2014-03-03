@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//www.harmonicnw.com//iCal Event
+X-WR-TIMEZONE:America/Los_Angeles
+BEGIN:VEVENT
+DTSTAMP:20140303T061704Z
+UID:20140303T061704Z-1767938348@harmonicnw.com
+DTSTART;TZID=America/Los_Angeles:20140417T120000
+DTEND;TZID=America/Los_Angeles:20140417T120000
+SUMMARY:Harmonic Northwest Third Anniversary Party
+DESCRIPTION:http://public.harmonicnw.com/hnwparty2014
+LOCATION:NXT Industries Loft\, 123 NW Davis St.\, Portland\, OR 97209
+END:VEVENT
+END:VCALENDAR
