@@ -209,7 +209,7 @@ section {
 	
 	&#activities {
 		background-color: #000;
-		background-image: url(../images/green_wallpaper.jpg);
+		background-image: url(../images/green_wallpaper_cropped.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
 		@include breakpoint (small){
@@ -219,8 +219,7 @@ section {
 	
 	&#celebrate {
 		background-color: #000;
-		background-image: url(http://4.bp.blogspot.com/-ayo4zrFUi84/T_G2WmqpvgI/AAAAAAAAEDI/AvQsgyfExeE/s1600/BLueWhiteStarPaper.png);
-		background-size: cover;
+		background-image: url(../images/stars.png);
 		background-repeat: repeat;
 	}
 	
@@ -257,7 +256,7 @@ section {
 	
 	&#fortgeorge {
 		background-color: #000;
-		background-image: url(../images/skulls.png);
+		background-image: url(../images/skulls-burntumber.png);
 		background-repeat: repeat;
 		@include breakpoint (small){
 			background-attachment: fixed;
