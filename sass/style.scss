@@ -29,7 +29,7 @@ body {
   color: $text-color;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.1em;
 }
 
@@ -153,7 +153,6 @@ h4 {
 img {
 	height: auto;
 	width: 100%;
-	padding: 10px 0;
 }
 
 p,
@@ -234,14 +233,21 @@ section {
 	}
 	
 	&#dj {
-		background-color: #600;
+		background-color: #000;
+		background-image: url(../images/club.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		@include breakpoint (small){
+			background-attachment: fixed;
+		}
 	}
 
 	&#end {
 		background-color: #ff6700;
-		background-image: url(../images/harmonicnw-144x144.png);
+		background-image: url(../images/wood-hnw-3.jpg);
 		background-position: center center;
 		background-repeat: no-repeat;
+		background-size: cover;
 	}
 	
 	&#eighttaps {
@@ -264,9 +270,8 @@ section {
 	}
 	
 	&#fun {
-		background-color: #000;
-		background-image: url(http://bglabs.evade.netdna-cdn.com/wp-content/uploads/2013/05/pastel-polka-dot-background.png);
-		background-size: cover;
+		background-color: #213966;
+		background-image: url(../images/dots-3.png);
 		background-repeat: repeat;
 	}
 
