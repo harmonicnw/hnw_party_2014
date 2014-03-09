@@ -24,6 +24,12 @@ $link_hover_color: yellow;
   padding: 0;
 }
 
+html, body { 
+  /* keep page proper width for image appear */
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   background-color: #000;
   color: $text-color;
@@ -31,10 +37,6 @@ body {
   font-weight: 300;
   font-size: 20px;
   line-height: 1.1em;
-  
-  /* keep page proper width for image appear */
-  overflow-x : hidden;
-  width : 100%;
 }
 
 a {
