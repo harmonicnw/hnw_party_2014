@@ -32,7 +32,7 @@
 	
 	function initAppear() {
 		// set body overflow to hidden so that elements starting outside width of page don't make page wider
-		$('body').css({
+		$('body, html').css({
 			'overflow-x' : 'hidden',
 			'width' : '100%'
 		});
