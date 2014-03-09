@@ -31,11 +31,6 @@
 	});
 	
 	function initAppear() {
-		// set body overflow to hidden so that elements starting outside width of page don't make page wider
-		$('body, html').css({
-			'overflow-x' : 'hidden',
-			'width' : '100%'
-		});
 		$('.appear_from_left').each(function(){
 			$(this).appear(function() {
 				$(this).addClass('appear_from_left_active').animate({left: "0px",}, 1000);
