@@ -151,6 +151,16 @@ img {
   height: auto;
   width: 100%;
 }
+img.limitHeight {
+  max-height: 320px;
+  width: auto;
+}
+@media (min-width: 768px) {
+  img.limitHeight {
+    max-height: auto;
+    width: 100%;
+  }
+}
 
 p,
 ul,
@@ -380,17 +390,6 @@ ol {
 @media (min-width: 768px) {
   .col-sm-12 {
     margin-bottom: 0;
-  }
-}
-
-img.limitHeight {
-  max-height: 400px;
-  width: auto;
-}
-@media (min-width: 768px) {
-  img.limitHeight {
-    max-height: auto;
-    width: 100%;
   }
 }
 

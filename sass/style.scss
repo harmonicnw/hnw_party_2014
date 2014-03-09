@@ -159,6 +159,16 @@ h4 {
 img {
 	height: auto;
 	width: 100%;
+	
+	&.limitHeight {
+		max-height: 320px;
+		width: auto;
+		
+		@include breakpoint(small) {
+			max-height: auto;
+			width: 100%;
+		}
+	}
 }
 
 p,
@@ -214,16 +224,6 @@ ol {
 	  	margin-bottom: 0;
 	  }
 	}	
-}
-
-img.limitHeight {
-	max-height: 400px;
-	width: auto;
-	
-	@include breakpoint(small) {
-		max-height: auto;
-		width: 100%;
-	}
 }
 
 section {
