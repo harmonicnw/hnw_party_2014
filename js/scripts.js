@@ -119,49 +119,49 @@
 			
 		$.extend( options, optionsPassed );
 		
-		$.fn.hmcVCUpdate = function(options) {
-			
-			// make sure that window is wider than declared minimum width
-			if ( window.outerWidth > options.minWidth ) {
-			
-				// figure out biggest height if heights are to match
-				var biggestHeight = 0;
-				if ( options.sameHeight ) {
-					$(this).each(function(){
-						if ( $(this).height() > biggestHeight ) {
-							biggestHeight = $(this).height();
-						}
-					});
-				}
-				
-				$(this).each(function(){
-				
-					// add centering wrappers if they haven't already been added
-					if ( !$(this).hasClass('hmcVC') ) {
-						$(this)
-						.addClass('hmcVC')
-						//.css({'height' : myHeight + "px"})
-						.wrapInner("<div class='hmcVC2' style='border-collapse:collapse;display:table;margin:0;padding:0;width:100%;'><div class='hmcVC3' style='display:table-cell;vertical-align:middle;'></div></div>");
-					}
-					
-					// if sameHeight is true, set centering wrapper to biggest height, otherwise use container height
-					var myHeight = options.sameHeight ? biggestHeight : $(this).height();
-					$(this).children('.hmcVC2').height(myHeight);
-					
-				});
-				
-			} else {
-				// if below minimus width, remove formatting
-				$(this).find(".hmcVC3").contents().unwrap().unwrap();
-			}
-			
-		}
-		
 		// recenter when window size changes
 		$(window).resize(function(){
 			target.hmcVCUpdate(options);
 		});
 		$(window).trigger('resize');
+	}
+			
+	$.fn.hmcVCUpdate = function(options) {
+		
+		// make sure that window is wider than declared minimum width
+		if ( window.outerWidth > options.minWidth ) {
+		
+			// figure out biggest height if heights are to match
+			var biggestHeight = 0;
+			if ( options.sameHeight ) {
+				$(this).each(function(){
+					if ( $(this).height() > biggestHeight ) {
+						biggestHeight = $(this).height();
+					}
+				});
+			}
+			
+			$(this).each(function(){
+			
+				// add centering wrappers if they haven't already been added
+				if ( !$(this).hasClass('hmcVC') ) {
+					$(this)
+					.addClass('hmcVC')
+					//.css({'height' : myHeight + "px"})
+					.wrapInner("<div class='hmcVC2' style='border-collapse:collapse;display:table;margin:0;padding:0;width:100%;'><div class='hmcVC3' style='display:table-cell;vertical-align:middle;'></div></div>");
+				}
+				
+				// if sameHeight is true, set centering wrapper to biggest height, otherwise use container height
+				var myHeight = options.sameHeight ? biggestHeight : $(this).height();
+				$(this).children('.hmcVC2').height(myHeight);
+				
+			});
+			
+		} else {
+			// if below minimus width, remove formatting
+			$(this).find(".hmcVC3").contents().unwrap().unwrap();
+		}
+		
 	}	
 
 }( jQuery ));
