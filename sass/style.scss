@@ -24,6 +24,12 @@ $link_hover_color: yellow;
   padding: 0;
 }
 
+html, body { 
+  /* keep page proper width for image appear */
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   background-color: #000;
   color: $text-color;
@@ -153,6 +159,16 @@ h4 {
 img {
 	height: auto;
 	width: 100%;
+	
+	&.limitHeight {
+		max-height: 320px;
+		width: auto;
+		
+		@include breakpoint(small) {
+			max-height: none;
+			width: 100%;
+		}
+	}
 }
 
 p,
@@ -166,15 +182,21 @@ h5,
 h6,
 .panel,
 .row {
+
+	text-align: center;
   
-  &:first-child,
-  &.first-child {
+	&:first-child,
+	&.first-child {
 	margin-top: 0;  
-  }
-  &:last-child,
-  &.last-child {
+	}
+	&:last-child,
+	&.last-child {
 	margin-bottom: 0;  
-  } 
+	}
+	
+	@include breakpoint(small) {
+		text-align:left;
+	}
 }
 
 p,
@@ -191,20 +213,25 @@ ol {
 }
 
 @for $i from 1 through 12 {
-	.col-md-#{$i} {
-	  margin-bottom: 1em;
+	.col-sm-#{$i} {
+	  margin-bottom: 2em;
 	  
 	  &:last-child {
 		  margin-bottom: 0;
 	  }
 	  
-	  @include breakpoint(medium) {
+	  @include breakpoint(small) {
 	  	margin-bottom: 0;
 	  }
 	}	
 }
 
 section {
+	$section-padding: 60px;
+
+	min-height: 500px;
+	padding-top: $section-padding;
+	padding-bottom: $section-padding;
 	
 	&#activities {
 		background-color: #000;
@@ -225,6 +252,7 @@ section {
 	&#contest {
 		background-color: #000;
 		background-image: url(../images/epic-high-five.jpg);
+		background-position: center center;
 		background-size: cover;
 		background-repeat: no-repeat;
 		@include breakpoint (small){
@@ -235,6 +263,17 @@ section {
 	&#dj {
 		background-color: #000;
 		background-image: url(../images/club.jpg);
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		@include breakpoint (small){
+			background-attachment: fixed;
+		}
+	}
+	
+	&#eighttaps {
+		background-color: #000;
+		background-image: url(../images/beer-texture.jpg);
 		background-size: cover;
 		background-repeat: no-repeat;
 		@include breakpoint (small){
@@ -248,16 +287,6 @@ section {
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
-	}
-	
-	&#eighttaps {
-		background-color: #000;
-		background-image: url(../images/beer-texture.jpg);
-		background-size: cover;
-		background-repeat: no-repeat;
-		@include breakpoint (small){
-			background-attachment: fixed;
-		}
 	}
 	
 	&#fortgeorge {
@@ -307,7 +336,7 @@ ul.soc {
 	}
 }
 
-@include breakpoint(small){
+@include breakpoint(small) {
 	.appear_from_left {
 		display: inline-block;
 		opacity: 0;
@@ -329,6 +358,10 @@ ul.soc {
 		@include single-transition(opacity, 1s, ease);
 		opacity: 1;
 		filter: alpha(opacity = 100);
+	}
+	
+	.vertOffsetUp {
+		margin-top: -40px;
 	}
 }
 
