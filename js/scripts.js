@@ -95,6 +95,8 @@
 	};
 	
 	/*
+	Harmonic Vertical Center jQuery Plugin 
+	Version: 1.0.0
 	
 	Options:
 	{
@@ -147,7 +149,6 @@
 				if ( !$(this).hasClass('hmcVC') ) {
 					$(this)
 					.addClass('hmcVC')
-					//.css({'height' : myHeight + "px"})
 					.wrapInner("<div class='hmcVC2' style='border-collapse:collapse;display:table;margin:0;padding:0;width:100%;'><div class='hmcVC3' style='display:table-cell;vertical-align:middle;'></div></div>");
 				}
 				
